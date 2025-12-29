@@ -241,7 +241,7 @@ export default function Projects() {
                                                 <img
                                                     src={item.src}
                                                     alt={item.alt || selectedProject.title}
-                                                    className="w-full h-auto border border-foreground/10 rounded-sm grayscale hover:grayscale-0 transition-all duration-500"
+                                                    className="w-full h-auto border border-foreground/10 rounded-sm hover:opacity-90 transition-all duration-500"
                                                 />
                                             ) : (
                                                 <video
