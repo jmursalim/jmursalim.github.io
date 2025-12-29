@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Circular background (optional, remove for transparent) -->
+  <circle cx="256" cy="256" r="256" fill="#f0f0f0"/>
+  
+  <!-- Cat Face -->
+  <g fill="#333333">
+    <!-- Ears -->
+    <path d="M120 100 L160 220 L80 220 Z" transform="rotate(-15 120 100)" />
+    <path d="M392 100 L432 220 L352 220 Z" transform="rotate(15 392 100)" />
+    
+    <!-- Head -->
+    <ellipse cx="256" cy="280" rx="160" ry="140" />
+    
+    <!-- Eyes -->
+    <circle cx="196" cy="260" r="16" fill="#ffffff" />
+    <circle cx="316" cy="260" r="16" fill="#ffffff" />
+    
+    <!-- Nose -->
+    <path d="M246 300 L266 300 L256 315 Z" fill="#ffaaf0" />
+    
+    <!-- Mouth -->
+    <path d="M256 315 Q236 335 216 315" stroke="#ffaaf0" stroke-width="5" fill="none" stroke-linecap="round" />
+    <path d="M256 315 Q276 335 296 315" stroke="#ffaaf0" stroke-width="5" fill="none" stroke-linecap="round" />
+  </g>
+</svg>
