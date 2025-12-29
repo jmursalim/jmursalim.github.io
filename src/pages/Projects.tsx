@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
+import speedotest1 from '../assets/speedotest1.mp4';
+import speedotest2 from '../assets/speedotest2.mp4';
+import alignedgraphcleaned from '../assets/alignedgraphcleaned.png';
+import img6592 from '../assets/IMG_6592.jpg';
+import img6593 from '../assets/IMG_6593.jpg';
+import fsmCombo from '../assets/fsmCombo.jpg';
+import img0442 from '../assets/IMG_0442.jpg';
+import trongame from '../assets/trongame.mp4';
+
 interface MediaItem {
     type: 'image' | 'video';
     src: string;
@@ -34,17 +43,17 @@ const projects: Project[] = [
         media: [
             {
                 type: 'video',
-                src: '/src/assets/speedotest1.mp4',
+                src: speedotest1,
                 poster: ''
             },
             {
                 type: 'video',
-                src: '/src/assets/speedotest2.mp4',
+                src: speedotest2,
                 poster: ''
             },
             {
                 type: 'image',
-                src: '/src/assets/alignedgraphcleaned.png',
+                src: alignedgraphcleaned,
                 alt: 'test vs reference graph'
             }
         ]
@@ -70,22 +79,22 @@ const projects: Project[] = [
         media: [
             {
                 type: 'image',
-                src: '/src/assets/IMG_6592.jpg',
+                src: img6592,
                 alt: 'Keypad and Combo Lock'
             },
             {
                 type: 'image',
-                src: '/src/assets/IMG_6593.jpg',
+                src: img6593,
                 alt: 'Keypad and Combo Lock'
             },
             {
                 type: 'image',
-                src: '/src/assets/fsmCombo.jpg',
+                src: fsmCombo,
                 alt: 'FSM Diagram'
             },
             {
                 type: 'image',
-                src: '/src/assets/IMG_0442.jpg',
+                src: img0442,
                 alt: 'FSM Diagram'
             }
         ]
@@ -100,7 +109,7 @@ const projects: Project[] = [
         media: [
             {
                 type: 'video',
-                src: '/src/assets/trongame.mp4', // Example video
+                src: trongame,
                 poster: ''
             }
         ]
