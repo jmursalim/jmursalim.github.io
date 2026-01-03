@@ -151,7 +151,7 @@ export default function Projects() {
                         className={`group cursor-pointer p-0 transition-opacity duration-300 ${selectedId && selectedId !== project.id ? 'opacity-30 hover:opacity-100' : 'opacity-100'
                             }`}
                     >
-                        <h3 className={`text-3xl font-light mb-1 transition-colors text-foreground`}>
+                        <h3 className={`font-light mb-1 transition-colors text-foreground`} style={{ fontSize: 'clamp(1.25rem, 2vw, 1.875rem)' }}>
                             {project.title}
                         </h3>
                         <div className="flex flex-col items-start">
@@ -178,6 +178,7 @@ export default function Projects() {
                             <button
                                 onClick={() => setSelectedId(null)}
                                 className="p-2 hover:bg-muted/10 rounded-full transition-colors group"
+                                aria-label="Close project details"
                             >
                                 <X size={32} className="text-foreground transition-transform group-hover:rotate-90" />
                             </button>
@@ -185,7 +186,7 @@ export default function Projects() {
 
                         <div className="space-y-12 max-w-3xl w-full mx-auto mt-10">
                             <div>
-                                <h2 className="text-6xl md:text-7xl font-thin tracking-tighter mb-6 leading-none">
+                                <h2 className="font-thin tracking-tighter mb-6 leading-none" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)' }}>
                                     {selectedProject?.title}
                                 </h2>
                                 <div className="flex items-center gap-4 text-sm font-light font-mono text-foreground uppercase tracking-widest border-y border-foreground py-4">
@@ -269,19 +270,82 @@ export default function Projects() {
                         initial={{ opacity: 0, y: "100%" }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: "100%" }}
-                        className="md:hidden fixed inset-0 z-50 bg-background flex flex-col p-6 overflow-y-auto"
+                        className="md:hidden fixed inset-0 z-50 bg-background flex flex-col p-6 overflow-y-auto no-scrollbar"
                     >
-                        <div className="flex justify-between items-center mb-8">
+                        <div className="flex justify-between items-center mb-8 shrink-0">
                             <h2 className="text-2xl font-bold">{selectedProject?.title}</h2>
                             <button
                                 onClick={() => setSelectedId(null)}
-                                className="p-2 hover:bg-muted rounded-full"
+                                className="p-2 hover:bg-muted/10 rounded-full"
+                                aria-label="Close project details"
                             >
                                 <X size={24} />
                             </button>
                         </div>
-                        <p className="text-muted-foreground mb-6">{selectedProject?.fullDesc}</p>
-                        {/* ... */}
+
+                        <div className="flex flex-col gap-6 pb-20">
+                            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground flex-wrap">
+                                <span>{selectedProject?.date}</span>
+                                <span>/</span>
+                                <span>{selectedProject?.tags[0]}</span>
+                            </div>
+
+                            <p className="text-lg font-light leading-relaxed text-foreground">
+                                {selectedProject?.fullDesc}
+                            </p>
+
+                            {/* Mobile Links */}
+                            {selectedProject?.links && selectedProject.links.length > 0 && (
+                                <div className="flex flex-wrap gap-4 pt-2">
+                                    {selectedProject.links.map((link) => (
+                                        <a
+                                            key={link.label}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm font-medium text-foreground underline decoration-1 underline-offset-4"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Mobile Tags */}
+                            <div className="flex gap-2 flex-wrap">
+                                {selectedProject?.tags.map(tag => (
+                                    <span key={tag} className="px-3 py-1 border border-foreground/50 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Mobile Media */}
+                            <div className="flex flex-col gap-4 pt-4">
+                                {selectedProject?.media && (
+                                    selectedProject.media.map((item, index) => (
+                                        <div key={index} className="w-full">
+                                            {item.type === 'image' ? (
+                                                <img
+                                                    src={item.src}
+                                                    alt={item.alt || selectedProject.title}
+                                                    className="w-full h-auto border border-foreground/10 rounded-sm"
+                                                />
+                                            ) : (
+                                                <video
+                                                    src={item.src}
+                                                    controls
+                                                    poster={item.poster}
+                                                    className="w-full h-auto border border-foreground/10 rounded-sm"
+                                                >
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            )}
+                                        </div>
+                                    ))
+                                )}
+                            </div>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

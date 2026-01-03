@@ -55,8 +55,9 @@ export default function Layout() {
     return (
         <div className={`relative w-full h-screen overflow-hidden ${outerBgClass} text-foreground transition-colors duration-300`}>
             {/* Background Layer with Border Logic */}
+            {/* Background Layer with Border Logic */}
             <div
-                className={`absolute inset-0 z-0 transition-all duration-300 ${isDark ? 'bg-black' : 'bg-white'} ${isMobile ? 'top-0 left-0 right-0 bottom-0' : `top-8 left-8 right-8 bottom-8 border ${borderColorClass} rounded-lg overflow-hidden`
+                className={`absolute inset-0 z-0 transition-all duration-300 ${isDark ? 'bg-black' : 'bg-white'} ${isMobile ? 'top-0 left-0 right-0 bottom-0' : `top-4 left-4 right-4 bottom-4 md:top-8 md:left-8 md:right-8 md:bottom-8 border ${borderColorClass} rounded-lg overflow-hidden`
                     }`}
             >
                 <Dither
@@ -75,7 +76,7 @@ export default function Layout() {
             </div>
 
             {/* Content Layer */}
-            <div className="relative z-10 w-full h-full flex flex-col p-8 md:p-12 pointer-events-none">
+            <div className="relative z-10 w-full h-full flex flex-col p-4 md:p-12 pointer-events-none">
                 {/* Persistent Header Area */}
                 <div className="flex flex-col gap-6 pointer-events-auto mb-8 tracking-tight">
                     {/* Top-Left Navbar */}
