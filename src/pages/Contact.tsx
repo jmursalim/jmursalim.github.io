@@ -9,7 +9,7 @@ export default function Contact() {
     ];
 
     return (
-        <div className="min-h-full flex flex-col justify-center max-w-2xl py-12 md:py-0">
+        <div className="h-full flex flex-col justify-start pt-8 max-w-2xl">
             <div className="grid gap-6">
                 {contactLinks.map((link) => (
                     <a

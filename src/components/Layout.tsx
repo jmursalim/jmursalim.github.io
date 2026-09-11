@@ -43,9 +43,8 @@ export default function Layout() {
 
     // Theme Logic:
     // Dark Mode: Outer=Black | Frame Border=White | Dither BG=Black | Wave Color=White([1,1,1])
-    // Theme Logic:
-    // Dark Mode: reduced intensity white ([0.4, 0.4, 0.4]) - visible but not overpowering
-    const waveColor: [number, number, number] = isDark ? [0.35, 0.35, 0.35] : [0, 0, 0];
+    // Dark Mode: subtle neutral grey wave [0.5, 0.5, 0.5] for optimal text legibility
+    const waveColor: [number, number, number] = isDark ? [0.5, 0.5, 0.5] : [0, 0, 0];
     const backgroundColor: [number, number, number] = isDark ? [0, 0, 0] : [1, 1, 1];
 
     // Outer frame background
@@ -67,7 +66,7 @@ export default function Layout() {
                     enableMouseInteraction={false}
                     mouseRadius={0.3}
                     colorNum={5}
-                    pixelSize={1}
+                    pixelSize={2}
                     waveAmplitude={0.2}
                     waveFrequency={0.6}
                     waveSpeed={0.02}
@@ -86,7 +85,7 @@ export default function Layout() {
 
                     {/* Persistent Name and Title */}
                     <div>
-                        <h1 className="text-6xl md:text-8xl font-light tracking-tighter mb-2">
+                        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-2">
                             Jordi Mursalim
                         </h1>
                         <h2 className="text-2xl md:text-3xl text-foreground font-thin">

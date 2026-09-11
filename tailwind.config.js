@@ -48,7 +48,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"PP Kyoto"', 'Inter', 'sans-serif'],
+        kyoto: ['"PP Kyoto"', 'serif'],
+        inter: ['Inter', 'sans-serif'],
       },
     },
   },

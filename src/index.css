@@ -1,3 +1,67 @@
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-Light.otf') format('opentype');
+  font-weight: 200 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-LightItalic.otf') format('opentype');
+  font-weight: 200 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-Medium.otf') format('opentype');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-MediumItalic.otf') format('opentype');
+  font-weight: 400 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-Extrabold.otf') format('opentype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Kyoto';
+  src: url('/fonts/PPKyoto-ExtraboldItalic.otf') format('opentype');
+  font-weight: 600 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -84,7 +148,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'PP Kyoto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   /* Smooth scrolling */
@@ -101,5 +166,25 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .vignette-radial {
+    position: relative;
+    z-index: 0;
+  }
+
+  .vignette-radial::before {
+    content: '';
+    position: absolute;
+    inset: -4rem -5rem;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 80% 80% at center,
+      hsl(var(--background) / 0.35) 0%,
+      hsl(var(--background) / 0.18) 45%,
+      hsl(var(--background) / 0.05) 75%,
+      transparent 100%
+    );
   }
 }

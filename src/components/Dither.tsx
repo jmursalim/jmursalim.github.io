@@ -112,24 +112,25 @@ const float bayerMatrix8x8[64] = float[64](
   42.0/64.0,26.0/64.0, 38.0/64.0, 22.0/64.0, 41.0/64.0,25.0/64.0, 37.0/64.0, 21.0/64.0
 );
 
-vec3 dither(vec2 uv, vec3 color) {
+float dither(vec2 uv, float lum) {
   vec2 scaledCoord = floor(uv * resolution / pixelSize);
   int x = int(mod(scaledCoord.x, 8.0));
   int y = int(mod(scaledCoord.y, 8.0));
   float threshold = bayerMatrix8x8[y * 8 + x] - 0.25;
   float step = 1.0 / (colorNum - 1.0);
-  color += threshold * step;
-  float bias = 0.2;
-  color = clamp(color - bias, 0.0, 1.0);
-  return floor(color * (colorNum - 1.0) + 0.5) / (colorNum - 1.0);
+  lum += threshold * step;
+  float bias = 0.22;
+  lum = clamp(lum - bias, 0.0, 1.0);
+  return floor(lum * (colorNum - 1.0) + 0.5) / (colorNum - 1.0);
 }
 
 void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor) {
   vec2 normalizedPixelSize = pixelSize / resolution;
   vec2 uvPixel = normalizedPixelSize * floor(uv / normalizedPixelSize);
   vec4 color = texture2D(inputBuffer, uvPixel);
-  color.rgb = dither(uv, color.rgb);
-  outputColor = color;
+  float lum = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+  float d = dither(uv, lum);
+  outputColor = vec4(vec3(d), 1.0);
 }
 `;
 
@@ -324,8 +325,12 @@ export default function Dither({
         <Canvas
             className="w-full h-full relative"
             camera={{ position: [0, 0, 6] }}
-            dpr={1}
-            gl={{ antialias: true, preserveDrawingBuffer: true }}
+            dpr={[1, 2]}
+            gl={{
+                antialias: true,
+                preserveDrawingBuffer: true,
+                toneMapping: THREE.NoToneMapping
+            }}
         >
             <DitheredWaves
                 waveSpeed={waveSpeed}
