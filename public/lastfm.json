@@ -1,13 +1,67 @@
 {
   "currentTrack": {
-    "name": "The Orb Of Dreamers",
-    "artist": "The Daniel Pemberton TV Orchestra",
-    "album": "Little BIG Music: Musical Oddities From And Inspired By Little Big Planet",
-    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/56ed530fd527487bc8825f960a04bec4.jpg",
-    "url": "https://www.last.fm/music/The+Daniel+Pemberton+TV+Orchestra/_/The+Orb+Of+Dreamers",
+    "name": "A Lively Inn",
+    "artist": "3 Déesses",
+    "album": "Mtopia, Pt. 1",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+    "url": "https://www.last.fm/music/3+D%C3%A9esses/_/A+Lively+Inn",
     "nowPlaying": true
   },
   "recentTracks": [
+    {
+      "name": "Butterflies",
+      "artist": "Tsundere Twintails",
+      "album": "Butterflies",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/fc5f1198fc16870a3a9a61d743a033ec.jpg",
+      "url": "https://www.last.fm/music/Tsundere+Twintails/_/Butterflies",
+      "nowPlaying": false,
+      "timestamp": 1790389917
+    },
+    {
+      "name": "bee.",
+      "artist": "GroovyDominoes52",
+      "album": "bee.",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0f721d315bc561a86b04413ed1a3e6cf.jpg",
+      "url": "https://www.last.fm/music/GroovyDominoes52/_/bee.",
+      "nowPlaying": false,
+      "timestamp": 1790389858
+    },
+    {
+      "name": "miffy cafe",
+      "artist": "sakuracloud",
+      "album": "miffy cafe",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5a65f802e8cdacad8753dbea8aafd435.jpg",
+      "url": "https://www.last.fm/music/sakuracloud/_/miffy+cafe",
+      "nowPlaying": false,
+      "timestamp": 1790389708
+    },
+    {
+      "name": "sofa cat",
+      "artist": "Carpe",
+      "album": "sofa cat",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/987a84efd6528b55c173810b8585a2c3.jpg",
+      "url": "https://www.last.fm/music/Carpe/_/sofa+cat",
+      "nowPlaying": false,
+      "timestamp": 1790389616
+    },
+    {
+      "name": "twinkle twinkle little bird",
+      "artist": "Leon Chang",
+      "album": "bird world",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0645fb19be3ae610e9bfd5d26e47b352.png",
+      "url": "https://www.last.fm/music/Leon+Chang/_/twinkle+twinkle+little+bird",
+      "nowPlaying": false,
+      "timestamp": 1790389512
+    },
+    {
+      "name": "The Orb Of Dreamers",
+      "artist": "The Daniel Pemberton TV Orchestra",
+      "album": "Little BIG Music: Musical Oddities From And Inspired By Little Big Planet",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/56ed530fd527487bc8825f960a04bec4.jpg",
+      "url": "https://www.last.fm/music/The+Daniel+Pemberton+TV+Orchestra/_/The+Orb+Of+Dreamers",
+      "nowPlaying": false,
+      "timestamp": 1790389369
+    },
     {
       "name": "the indoor song",
       "artist": "Tsundere Twintails",
@@ -43,63 +97,9 @@
       "url": "https://www.last.fm/music/pomodorosa/_/Sakura+front",
       "nowPlaying": false,
       "timestamp": 1790388785
-    },
-    {
-      "name": "I Don't Like Hair Wax",
-      "artist": "pomodorosa",
-      "album": "Pomodorosa",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68f7d9151f6f5914fb4357769b3edb81.jpg",
-      "url": "https://www.last.fm/music/pomodorosa/_/I+Don%27t+Like+Hair+Wax",
-      "nowPlaying": false,
-      "timestamp": 1790388586
-    },
-    {
-      "name": "Killing Time",
-      "artist": "Magdalena Bay",
-      "album": "Imaginal Disk",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0787b4f6e2086c763482254d375b17f0.png",
-      "url": "https://www.last.fm/music/Magdalena+Bay/_/Killing+Time",
-      "nowPlaying": false,
-      "timestamp": 1790388292
-    },
-    {
-      "name": "Lullaby for a Memory",
-      "artist": "Fax Gang",
-      "album": "Scattersun",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/15ab649c1e7651adc33849b667d3d8ec.jpg",
-      "url": "https://www.last.fm/music/Fax+Gang/_/Lullaby+for+a+Memory",
-      "nowPlaying": false,
-      "timestamp": 1790388055
-    },
-    {
-      "name": "Blue Eyes",
-      "artist": "Frost Children",
-      "album": "SISTER",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7c4f586e30050eceadb7c299d91c5582.jpg",
-      "url": "https://www.last.fm/music/Frost+Children/_/Blue+Eyes",
-      "nowPlaying": false,
-      "timestamp": 1790387914
-    },
-    {
-      "name": "your clothes",
-      "artist": "Jane Remover",
-      "album": "Frailty",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/543cc0aee1c6e279f9d8ce4d258bf16d.jpg",
-      "url": "https://www.last.fm/music/Jane+Remover/_/your+clothes",
-      "nowPlaying": false,
-      "timestamp": 1790387615
-    },
-    {
-      "name": "My guy (Corporate shuffle)",
-      "artist": "underscores",
-      "album": "Wallsocket (Director's Cut)",
-      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2336575485a677fbd0f2ba685a9dcda4.jpg",
-      "url": "https://www.last.fm/music/underscores/_/My+guy+(Corporate+shuffle)",
-      "nowPlaying": false,
-      "timestamp": 1790387409
     }
   ],
-  "totalScrobbles": "36,886",
+  "totalScrobbles": "36,892",
   "isNowPlaying": true,
-  "updatedAt": "2026-09-26T02:24:00.140Z"
+  "updatedAt": "2026-09-26T02:35:38.105Z"
 }

@@ -4,13 +4,10 @@ import { X } from 'lucide-react';
 import { useLastFm, type LastFmData } from '../hooks/useLastFm';
 import LastFmSection from '../components/LastFmSection';
 
-// You can import local images and videos here from `../assets/`
-// Example:
-// import myPhoto from '../assets/myPhoto.jpg';
-// import myVideo from '../assets/myVideo.mp4';
+
 import rivian1 from '../assets/rivian1.jpeg';
-import rivian2 from '../assets/rivian2.jpeg';
-import rivian3 from '../assets/rivian3.jpeg';
+import rivian2 from '../assets/rivian2.JPEG';
+import rivian3 from '../assets/rivian3.JPEG';
 import baja1 from '../assets/baja1.JPEG';
 import baja2 from '../assets/baja2.JPEG';
 import baja3 from '../assets/baja3.jpeg';
@@ -19,7 +16,7 @@ import mecha1 from '../assets/mecha1.JPG';
 import mecha2 from '../assets/mecha2.jpeg';
 import mecha5 from '../assets/mecha5.jpeg';
 import mecha7 from '../assets/mecha7.MOV';
-import frisbee1 from '../assets/frisbee1.JPG';
+import frisbee1 from '../assets/frisbee1.jpg';
 import frisbee2 from '../assets/frisbee2.JPG';
 import outside2 from '../assets/outside2.MOV';
 import outside3 from '../assets/outside3.MP4';
@@ -33,7 +30,7 @@ import guitar1 from '../assets/guitar1.JPG';
 import guitar2 from '../assets/guitar2.JPEG';
 import food1 from '../assets/food1.jpeg';
 import food2 from '../assets/food2.jpeg';
-import food3 from '../assets/food3.jpg';
+import food3 from '../assets/food3.JPG';
 
 export interface MediaItem {
     type: 'image' | 'video';
