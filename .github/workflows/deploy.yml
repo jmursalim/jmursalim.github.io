@@ -3,8 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Automatically refresh music scrobbles every hour
+  schedule:
+    - cron: '0 * * * *'
+  # Allows you to run this workflow manually from the Actions tab anytime
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -14,7 +16,6 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -34,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME || 'jmursalim' }}
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

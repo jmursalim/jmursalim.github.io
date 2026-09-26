@@ -1,0 +1,105 @@
+{
+  "currentTrack": {
+    "name": "The Orb Of Dreamers",
+    "artist": "The Daniel Pemberton TV Orchestra",
+    "album": "Little BIG Music: Musical Oddities From And Inspired By Little Big Planet",
+    "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/56ed530fd527487bc8825f960a04bec4.jpg",
+    "url": "https://www.last.fm/music/The+Daniel+Pemberton+TV+Orchestra/_/The+Orb+Of+Dreamers",
+    "nowPlaying": true
+  },
+  "recentTracks": [
+    {
+      "name": "the indoor song",
+      "artist": "Tsundere Twintails",
+      "album": "The Indoor Song",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6b7c5470abe65a92f260f5c3962b8f8.jpg",
+      "url": "https://www.last.fm/music/Tsundere+Twintails/_/the+indoor+song",
+      "nowPlaying": false,
+      "timestamp": 1790389213
+    },
+    {
+      "name": "main menu",
+      "artist": "Leon Chang",
+      "album": "bird world",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0645fb19be3ae610e9bfd5d26e47b352.png",
+      "url": "https://www.last.fm/music/Leon+Chang/_/main+menu",
+      "nowPlaying": false,
+      "timestamp": 1790389095
+    },
+    {
+      "name": "Farewell on a Rainy Night of Spring",
+      "artist": "Minuano",
+      "album": "Butterfly Dream",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3124b677f6a4ccb56e235582dcec7609.jpg",
+      "url": "https://www.last.fm/music/Minuano/_/Farewell+on+a+Rainy+Night+of+Spring",
+      "nowPlaying": false,
+      "timestamp": 1790388990
+    },
+    {
+      "name": "Sakura front",
+      "artist": "pomodorosa",
+      "album": "Pomodorosa",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68f7d9151f6f5914fb4357769b3edb81.jpg",
+      "url": "https://www.last.fm/music/pomodorosa/_/Sakura+front",
+      "nowPlaying": false,
+      "timestamp": 1790388785
+    },
+    {
+      "name": "I Don't Like Hair Wax",
+      "artist": "pomodorosa",
+      "album": "Pomodorosa",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68f7d9151f6f5914fb4357769b3edb81.jpg",
+      "url": "https://www.last.fm/music/pomodorosa/_/I+Don%27t+Like+Hair+Wax",
+      "nowPlaying": false,
+      "timestamp": 1790388586
+    },
+    {
+      "name": "Killing Time",
+      "artist": "Magdalena Bay",
+      "album": "Imaginal Disk",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0787b4f6e2086c763482254d375b17f0.png",
+      "url": "https://www.last.fm/music/Magdalena+Bay/_/Killing+Time",
+      "nowPlaying": false,
+      "timestamp": 1790388292
+    },
+    {
+      "name": "Lullaby for a Memory",
+      "artist": "Fax Gang",
+      "album": "Scattersun",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/15ab649c1e7651adc33849b667d3d8ec.jpg",
+      "url": "https://www.last.fm/music/Fax+Gang/_/Lullaby+for+a+Memory",
+      "nowPlaying": false,
+      "timestamp": 1790388055
+    },
+    {
+      "name": "Blue Eyes",
+      "artist": "Frost Children",
+      "album": "SISTER",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7c4f586e30050eceadb7c299d91c5582.jpg",
+      "url": "https://www.last.fm/music/Frost+Children/_/Blue+Eyes",
+      "nowPlaying": false,
+      "timestamp": 1790387914
+    },
+    {
+      "name": "your clothes",
+      "artist": "Jane Remover",
+      "album": "Frailty",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/543cc0aee1c6e279f9d8ce4d258bf16d.jpg",
+      "url": "https://www.last.fm/music/Jane+Remover/_/your+clothes",
+      "nowPlaying": false,
+      "timestamp": 1790387615
+    },
+    {
+      "name": "My guy (Corporate shuffle)",
+      "artist": "underscores",
+      "album": "Wallsocket (Director's Cut)",
+      "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2336575485a677fbd0f2ba685a9dcda4.jpg",
+      "url": "https://www.last.fm/music/underscores/_/My+guy+(Corporate+shuffle)",
+      "nowPlaying": false,
+      "timestamp": 1790387409
+    }
+  ],
+  "totalScrobbles": "36,886",
+  "isNowPlaying": true,
+  "updatedAt": "2026-09-26T02:24:00.140Z"
+}

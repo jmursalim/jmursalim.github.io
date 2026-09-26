@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "fetch:lastfm": "node scripts/fetch-lastfm.js",
+    "build": "node scripts/fetch-lastfm.js && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

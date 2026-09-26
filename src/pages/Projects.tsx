@@ -144,7 +144,7 @@ const projects: Project[] = [
         sections: [
             {
                 subheading: "POWERTRAIN INSTRUMENTATION",
-                text: "For the Engine Data Acquisition system, I led the end-to-end instrumentation of the powertrain. This involved designing and implementing the wiring harness, electronics, and firmware to integrate more than eight sensors into the vehicle."
+                text: "For the Engine Data Acquisition system, I led the end-to-end instrumentation of the powertrain. This involved designing and implementing the wiring harness, electronics, and firmware architecture to integrate eight (potentially more to come) sensors into the rear of the car."
             },
             {
                 subheading: "FIRMWARE ARCHITECTURE",
@@ -357,14 +357,14 @@ export default function Projects() {
         <div className="flex h-full gap-12 relative">
             {/* Unified subtle feathered vignette behind the project text column */}
             <div
-                className="absolute -top-12 -bottom-12 -left-8 w-full md:w-5/12 -z-10 pointer-events-none"
+                className="absolute inset-y-0 -left-8 w-full md:w-5/12 -z-10 pointer-events-none"
                 style={{
                     background: 'radial-gradient(ellipse 90% 85% at 35% 45%, hsl(var(--background) / 0.35) 0%, hsl(var(--background) / 0.18) 50%, hsl(var(--background) / 0.05) 75%, transparent 100%)',
                 }}
             />
 
             {/* Project Scroll List (Left Side) - Always visible, fixed width */}
-            <div className="w-full md:w-1/3 flex-shrink-0 flex flex-col gap-6 overflow-y-auto no-scrollbar pb-20">
+            <div className="w-full md:w-1/3 flex-shrink-0 flex flex-col gap-6 overflow-y-auto no-scrollbar">
                 {sortedProjects.map((project) => (
                     <motion.div
                         key={project.id}
