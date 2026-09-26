@@ -34,7 +34,7 @@ export function formatRelativeTime(uts?: number): string {
     return new Date(uts * 1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 }
 
-export function useLastFm(_limit: number = 9): LastFmData {
+export function useLastFm(): LastFmData {
     const [currentTrack, setCurrentTrack] = useState<LastFmTrack | null>(null);
     const [recentTracks, setRecentTracks] = useState<LastFmTrack[]>([]);
     const [totalScrobbles, setTotalScrobbles] = useState<string>('');
@@ -72,9 +72,9 @@ export function useLastFm(_limit: number = 9): LastFmData {
             }
 
             setError(null);
-        } catch (err: any) {
+        } catch (err: unknown) {
             console.error('Failed to load Last.fm data:', err);
-            setError(err?.message || 'Failed to load music activity');
+            setError(err instanceof Error ? err.message : 'Failed to load music activity');
         } finally {
             setIsLoading(false);
         }
@@ -83,12 +83,25 @@ export function useLastFm(_limit: number = 9): LastFmData {
     useEffect(() => {
         fetchTracks();
 
-        // Check for updates every 20 seconds
+        // Check for updates every 20 seconds, but only when tab is active/visible
         const interval = setInterval(() => {
-            fetchTracks();
+            if (typeof document === 'undefined' || document.visibilityState === 'visible') {
+                fetchTracks();
+            }
         }, 20000);
 
-        return () => clearInterval(interval);
+        const handleVisibilityChange = () => {
+            if (document.visibilityState === 'visible') {
+                fetchTracks();
+            }
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            clearInterval(interval);
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
     }, [fetchTracks]);
 
     return {

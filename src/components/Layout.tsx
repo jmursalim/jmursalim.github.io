@@ -5,7 +5,12 @@ import { useState, useEffect } from 'react';
 
 export default function Layout() {
     const [isMobile, setIsMobile] = useState(false);
-    const [isDark, setIsDark] = useState(true); // Default to dark mode
+    const [isDark, setIsDark] = useState(() => {
+        if (typeof window !== 'undefined' && localStorage.theme === 'light') {
+            return false;
+        }
+        return true;
+    });
 
     useEffect(() => {
         const checkMobile = () => {
@@ -17,28 +22,17 @@ export default function Layout() {
     }, []);
 
     useEffect(() => {
-        // Initialize theme - Default to DARK
-        if (localStorage.theme === 'light') {
-            setIsDark(false);
-            document.documentElement.classList.remove('dark');
-        } else {
-            // Default to dark mode if no preference or if preference is dark
-            setIsDark(true);
+        if (isDark) {
             document.documentElement.classList.add('dark');
             localStorage.theme = 'dark';
-        }
-    }, []);
-
-    const toggleTheme = () => {
-        if (isDark) {
+        } else {
             document.documentElement.classList.remove('dark');
             localStorage.theme = 'light';
-            setIsDark(false);
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
-            setIsDark(true);
         }
+    }, [isDark]);
+
+    const toggleTheme = () => {
+        setIsDark(prev => !prev);
     };
 
     // Theme Logic:

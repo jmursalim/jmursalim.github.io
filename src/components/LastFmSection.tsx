@@ -104,6 +104,8 @@ export default function LastFmSection({ data, isMobile = false }: LastFmSectionP
                                     <img
                                         src={currentTrack.image}
                                         alt={`${currentTrack.album || currentTrack.name} artwork`}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     />
                                 ) : (
@@ -172,6 +174,8 @@ export default function LastFmSection({ data, isMobile = false }: LastFmSectionP
                                             <img
                                                 src={track.image}
                                                 alt={`${track.name} by ${track.artist}`}
+                                                loading="lazy"
+                                                decoding="async"
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                                             />
                                         ) : (

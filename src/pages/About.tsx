@@ -381,6 +381,8 @@ function AboutContent({
                                     <img
                                         src={media.src}
                                         alt={media.alt || media.caption || section.subheading || item.title}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-auto border border-foreground/10 rounded-sm hover:opacity-90 transition-all duration-500"
                                     />
                                 ) : (
@@ -388,6 +390,7 @@ function AboutContent({
                                         src={media.src}
                                         controls
                                         playsInline
+                                        preload="none"
                                         poster={media.poster}
                                         className="w-full h-auto border border-foreground/10 rounded-sm"
                                     >
@@ -479,6 +482,8 @@ function AboutContent({
                                 <img
                                     src={media.src}
                                     alt={media.alt || media.caption || item.title}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-auto border border-foreground/10 rounded-sm hover:opacity-90 transition-all duration-500"
                                 />
                             ) : (
@@ -486,6 +491,7 @@ function AboutContent({
                                     src={media.src}
                                     controls
                                     playsInline
+                                    preload="none"
                                     poster={media.poster}
                                     className="w-full h-auto border border-foreground/10 rounded-sm"
                                 >

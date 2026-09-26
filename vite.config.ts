@@ -26,7 +26,27 @@ export default defineConfig(({ mode }) => {
                   );
 
                   if (lastFmRes.ok) {
-                    const data = (await lastFmRes.json()) as any;
+                    interface LastFmImage {
+                      size?: string;
+                      '#text'?: string;
+                    }
+                    interface LastFmRawTrack {
+                      name?: string;
+                      artist?: { '#text'?: string; name?: string };
+                      album?: { '#text'?: string };
+                      image?: LastFmImage[];
+                      url?: string;
+                      date?: { uts?: string };
+                      '@attr'?: { nowplaying?: string };
+                    }
+                    interface LastFmResponse {
+                      recenttracks?: {
+                        track?: LastFmRawTrack | LastFmRawTrack[];
+                        '@attr'?: { total?: string };
+                      };
+                    }
+
+                    const data = (await lastFmRes.json()) as LastFmResponse;
                     const rawTracks = data?.recenttracks?.track;
                     const trackList = Array.isArray(rawTracks)
                       ? rawTracks
@@ -34,12 +54,12 @@ export default defineConfig(({ mode }) => {
                       ? [rawTracks]
                       : [];
 
-                    const parsedTracks = trackList.map((t: any) => {
+                    const parsedTracks = trackList.map((t: LastFmRawTrack) => {
                       const nowPlaying = t['@attr']?.nowplaying === 'true';
                       const uts = t.date?.uts ? parseInt(t.date.uts, 10) : undefined;
                       const image =
-                        t.image?.find((img: any) => img.size === 'extralarge')?.['#text'] ||
-                        t.image?.find((img: any) => img.size === 'large')?.['#text'] ||
+                        t.image?.find((img) => img.size === 'extralarge')?.['#text'] ||
+                        t.image?.find((img) => img.size === 'large')?.['#text'] ||
                         t.image?.[3]?.['#text'] ||
                         t.image?.[2]?.['#text'] ||
                         '';
@@ -84,5 +104,15 @@ export default defineConfig(({ mode }) => {
         },
       },
     ],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'three-vendor': ['three', '@react-three/fiber'],
+            'framer-motion': ['framer-motion'],
+          },
+        },
+      },
+    },
   };
 });

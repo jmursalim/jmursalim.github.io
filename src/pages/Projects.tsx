@@ -244,12 +244,15 @@ function ProjectContent({ project, isMobile = false }: { project: Project; isMob
                                                     <img
                                                         src={item.src}
                                                         alt={item.alt || item.caption || section.subheading || project.title}
+                                                        loading="lazy"
+                                                        decoding="async"
                                                         className="w-full h-auto border border-foreground/10 rounded-sm hover:opacity-90 transition-all duration-500"
                                                     />
                                                 ) : (
                                                     <video
                                                         src={item.src}
                                                         controls
+                                                        preload="none"
                                                         poster={item.poster}
                                                         className="w-full h-auto border border-foreground/10 rounded-sm"
                                                     >
@@ -312,12 +315,15 @@ function ProjectContent({ project, isMobile = false }: { project: Project; isMob
                                 <img
                                     src={item.src}
                                     alt={item.alt || item.caption || project.title}
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-auto border border-foreground/10 rounded-sm hover:opacity-90 transition-all duration-500"
                                 />
                             ) : (
                                 <video
                                     src={item.src}
                                     controls
+                                    preload="none"
                                     poster={item.poster}
                                     className="w-full h-auto border border-foreground/10 rounded-sm"
                                 >
